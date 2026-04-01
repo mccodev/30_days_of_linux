@@ -1,0 +1,5 @@
+# Large data files — never commit these to Git
+data_platform/data/
+
+# OS noise
+.DS_Store

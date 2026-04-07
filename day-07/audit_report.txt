@@ -1,0 +1,30 @@
+DATA LAKE FOLDER AUDIT REPORT
+Generated : 2026-04-07 22:39:34
+Directory : /home/emangdev/30-days-of-learning/day-07/data
+Threshold : Files > 100MB are flagged as [LARGE]
+----------------------------------------------------------------
+
+File      : ./data/logs/events.csv
+Size      : 1.78 KB (1823 bytes)
+Lines     : 51
+
+File      : ./data/raw/dump.csv
+Size      : 235.58 KB (241240 bytes)
+Lines     : 5001
+
+File      : ./data/sales/2024/q1.csv
+Size      : 7.37 KB (7549 bytes)
+Lines     : 201
+
+File      : ./data/sales/2024/q2.csv
+Size      : 5.54 KB (5673 bytes)
+Lines     : 151
+----------------------------------------------------------------
+
+SUMMARY
+----------------------------------------------------------------
+Total CSV files  : 4
+Total size       : 250.27 KB
+Total lines      : 5404
+Large files (>100MB): 0
+----------------------------------------------------------------

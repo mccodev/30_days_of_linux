@@ -1,0 +1,16 @@
+order_id,region,product,quantity,unit_price
+1001,East,Widget,3,15.00
+1002,West,Gadget,1,80.00
+1003,East,Widget,5,15.00
+1004,North,Sprocket,2,40.00
+1005,West,Widget,4,15.00
+1006,North,Gadget,1,80.00
+1007,East,Sprocket,3,40.00
+1008,South,Widget,6,15.00
+1009,South,Gadget,2,80.00
+1010,North,Widget,2,15.00
+1011,West,Sprocket,1,40.00
+1012,East,Gadget,1,80.00
+1013,South,Sprocket,4,40.00
+1014,West,Gadget,3,80.00
+1015,North,Sprocket,5,40.00

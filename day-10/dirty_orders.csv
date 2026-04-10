@@ -1,0 +1,9 @@
+ Order ID , Customer Name ,  Region  , Order Value (USD) , Status 
+1001,Alice Mwangi,East Africa,450.00,completed
+1002,Brian Otieno,West Africa ,320.50,PENDING
+1003,Cynthia Wanjiru, East Africa,875.25,Completed
+1004,David Kamau,North Africa,1200.00,completed
+1005,Eve Achieng,  West Africa,90.75,failed
+1006,Frank Omondi,East Africa ,555.00,COMPLETED
+1007,Grace Njeri,South Africa,430.00,pending
+1008,Henry Maina,West Africa,760.80,Failed

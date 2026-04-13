@@ -1,0 +1,20 @@
+{
+  "page": 1,
+  "total_results": 2,
+  "users": [
+    {
+      "id": "u123",
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "active": true,
+      "roles": ["admin", "user"]
+    },
+    {
+      "id": "u456",
+      "name": "Bob Jones",
+      "email": "bob@example.com",
+      "active": false,
+      "roles": ["user"]
+    }
+  ]
+}

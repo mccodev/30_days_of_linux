@@ -1,0 +1,7 @@
+[
+  {"timestamp": "2024-10-01T10:00:00Z", "level": "INFO", "message": "Service started", "user_id": null},
+  {"timestamp": "2024-10-01T10:05:00Z", "level": "ERROR", "message": "Database connection failed", "user_id": null},
+  {"timestamp": "2024-10-01T10:10:00Z", "level": "INFO", "message": "User logged in", "user_id": "u123"},
+  {"timestamp": "2024-10-01T10:15:00Z", "level": "WARN", "message": "High memory usage", "user_id": null},
+  {"timestamp": "2024-10-01T10:20:00Z", "level": "INFO", "message": "User logged out", "user_id": "u123"}
+]

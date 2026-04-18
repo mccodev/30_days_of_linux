@@ -1,0 +1,212 @@
+# Logs
+logs/
+*.log
+*.log.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Data files (raw and processed)
+data/
+*.csv
+*.json
+*.xml
+*.parquet
+*.avro
+*.tsv
+*.dat
+
+# Configuration with secrets
+config.env
+.env
+.env.local
+.env.production
+.env.staging
+*.key
+*.pem
+*.p12
+*.crt
+*.pfx
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# Backup files
+*.old
+*.orig
+*.rej
+~*
+
+# Runtime files
+*.pid
+*.lock
+*.sock
+
+# Test outputs
+test_output/
+test_results/
+coverage/
+.nyc_output/
+
+# Documentation build
+docs/_build/
+site/
+
+# Python (if using Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node.js (if using Node scripts)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Airflow (if using Airflow)
+airflow_home/
+dags/__pycache__/
+
+# Docker
+.dockerignore
+
+# Kubernetes secrets
+secrets/
+*.secret
+
+# Monitoring and metrics
+metrics/
+prometheus_data/
+grafana_data/
+
+# Large files (prevent accidental commits)
+*.large
+*.big
+# Files larger than 100MB (git-lfs should be used instead)
+*.100mb+
+
+# Local development
+local/
+dev/
+sandbox/
+
+# Performance profiling
+*.prof
+*.profile
+
+# Cache directories
+.cache/
+cache/
+
+# Build artifacts
+build/
+dist/
+target/
+bin/
+out/
+
+# IDE specific
+*.sublime-project
+*.sublime-workspace
+
+# Windows
+*.lnk
+
+# Linux
+*.rpm
+*.deb
+
+# MacOS
+.AppleDouble
+.LSOverride
+
+# Temporary directories for batch processing
+batches_*/
+batch_output/
+
+# Health check temporary files
+health_check_temp/
+monitoring_temp/
+
+# Pipeline artifacts
+pipeline_artifacts/
+processing_temp/
+
+# Data pipeline specific
+raw_data/
+staging_data/
+processed_data/
+archived_data/
+
+# Log rotation files
+*.log.1
+*.log.2
+*.log.3
+*.log.gz
+
+# System monitoring files
+system_stats/
+performance_logs/
+
+# Alert and notification logs
+alerts/
+notifications/
+
+# Backup directories
+backups/
+archive/
+
+# Test data
+test_data/
+sample_data/

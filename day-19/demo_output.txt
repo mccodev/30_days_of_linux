@@ -1,0 +1,127 @@
+=== System Monitor Demo Output ===
+
+Command: ./system_monitor.sh status
+
+=== Quick System Status ===
+CPU Usage: 15.2%
+Memory Usage: 42.7%
+Disk Usage: 28.5%
+Load Average: 0.45
+Active Connections: 48
+
+✓ Critical processes running: sshd, systemd, cron
+
+---
+
+Command: ./baseline_analyzer create normal
+
+Creating baseline: normal
+Collecting 12 samples over 60 minutes...
+Sample 1/12... ✓
+Sample 2/12... ✓
+...
+Sample 12/12... ✓
+Baseline created: /tmp/system_baselines/baseline_normal_20231219_143022.csv
+
+=== Baseline Analysis ===
+CPU Usage:    Avg: 18.3%, Min: 12.1%, Max: 25.7%
+Memory Usage: Avg: 45.2%, Min: 38.9%, Max: 52.1%
+Disk Usage:   Avg: 29.1%, Min: 28.5%, Max: 29.8%
+Load Average: Avg: 0.52, Min: 0.23, Max: 0.89
+Connections:  Avg: 52, Min: 41, Max: 68
+Processes:    Avg: 156, Min: 142, Max: 178
+
+Recommendations:
+✓ Baseline established for future comparison.
+
+---
+
+Command: ./system_monitor.sh report
+
+Report generated: /tmp/system_report_20231219_143045.txt
+
+=== System Health Report ===
+Generated: Tue Dec 19 14:30:45 UTC 2023
+
+=== System Information ===
+Hostname: learning-server
+Kernel: 5.15.0-78-generic
+Uptime: 2 days, 14 hours, 32 minutes
+
+=== Resource Usage ===
+CPU Usage: 16.8%
+Memory Usage: 44.2%
+Disk Usage: 28.7%
+Load Average: 0.48
+Active Connections: 51
+
+=== Top 5 CPU Processes ===
+root        8.5% systemd
+user        3.2% chrome
+root        2.1% kworker
+user        1.8% node
+root        1.2% NetworkManager
+
+=== Top 5 Memory Processes ===
+user       15.3% chrome
+user        8.7% node
+root        4.2% systemd
+user        3.1% firefox
+root        2.8% docker
+
+=== Disk Usage by Directory ===
+2.1G    /var/log
+156M    /tmp
+4.2G    /home
+1.8G    /opt
+
+=== Network Interfaces ===
+lo:
+127.0.0.1/8
+::1/128
+
+eth0:
+192.168.1.100/24
+fe80::a00:27ff:fe4e:66a1/64
+
+---
+
+Real-time Monitoring Sample (every 60 seconds):
+
+=== System Monitor - Tue Dec 19 14:31:00 UTC 2023 ===
+
+CPU Usage: 17.2%
+Memory Usage: 45.1%
+Disk Usage: 28.7%
+Load Average: 0.52
+Active Connections: 53
+
+✓ Critical processes running: sshd, systemd, cron
+
+[2023-12-19 14:31:00] [INFO] CPU: 17.2%, Memory: 45.1%, Disk: 28.7%, Load: 0.52
+
+Next check in 60 seconds... (Press Ctrl+C to stop)
+
+---
+
+Alert Example (when thresholds exceeded):
+
+=== System Monitor - Tue Dec 19 14:32:00 UTC 2023 ===
+
+CPU Usage: 85.3%
+  ⚠ HIGH CPU USAGE
+ALERT: CPU threshold exceeded! Current: 85.3%, Threshold: 80%
+
+Memory Usage: 87.2%
+  ⚠ HIGH MEMORY USAGE
+ALERT: Memory threshold exceeded! Current: 87.2%, Threshold: 85%
+
+Disk Usage: 28.7%
+Load Average: 0.51
+Active Connections: 55
+
+✓ Critical processes running: sshd, systemd, cron
+
+[2023-12-19 14:32:00] [ALERT] CPU threshold exceeded! Current: 85.3%, Threshold: 80%
+[2023-12-19 14:32:00] [ALERT] Memory threshold exceeded! Current: 87.2%, Threshold: 85%
+[2023-12-19 14:32:00] [INFO] CPU: 85.3%, Memory: 87.2%, Disk: 28.7%, Load: 0.51

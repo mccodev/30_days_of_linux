@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  database:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: pipeline_db
+      POSTGRES_USER: pipeline_user
+      POSTGRES_PASSWORD: pipeline_pass
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - pipeline_net
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U pipeline_user -d pipeline_db" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  api-ingestor:
+    build: ./api-ingestor
+    volumes:
+      - ./data:/data
+    networks:
+      - pipeline_net
+    depends_on:
+      database:
+        condition: service_healthy
+
+  data-processor:
+    build: ./data-processor
+    volumes:
+      - ./data:/data
+    networks:
+      - pipeline_net
+    depends_on:
+      - api-ingestor
+
+  web-api:
+    build: ./web-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - db_data:/data
+    networks:
+      - pipeline_net
+    depends_on:
+      database:
+        condition: service_healthy
+      data-processor:
+        condition: service_completed_successfully
+
+  monitoring:
+    build: ./monitoring
+    networks:
+      - pipeline_net
+    depends_on:
+      - api-ingestor
+      - data-processor
+      - web-api
+
+volumes:
+  db_data:
+
+networks:
+  pipeline_net:
+    driver: bridge

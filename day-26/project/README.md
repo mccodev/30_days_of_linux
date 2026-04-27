@@ -94,6 +94,34 @@ The test script:
 4. **web-api** reads from SQLite `/data/pipeline.db` and serves via Flask on port 5000
 5. **monitoring** polls all service health endpoints every 30 seconds
 
+## Local Development
+
+If you want to run or debug the Python scripts outside Docker:
+
+```bash
+# Create a virtual environment
+python -m venv .venv
+source .venv/bin/activate
+
+# Install all service dependencies
+pip install -r api-ingestor/requirements.txt
+pip install -r data-processor/requirements.txt
+pip install -r web-api/requirements.txt
+pip install -r monitoring/requirements.txt
+
+# Run a script directly
+python api-ingestor/ingest.py
+python data-processor/process.py
+python web-api/api.py
+```
+
+**Deactivate when done:**
+```bash
+deactivate
+```
+
+---
+
 ## Troubleshooting
 
 ### "No configuration file provided"

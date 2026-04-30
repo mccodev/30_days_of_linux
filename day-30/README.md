@@ -1,4 +1,4 @@
-# Day 30 - Linux Automation Toolkit (Capstone)
+# Day 30 - Linux Automation Toolkit 
 
 ## Objective
 
